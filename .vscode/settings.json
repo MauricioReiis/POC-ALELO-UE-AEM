@@ -1,0 +1,97 @@
+{
+	// VSCODE IDE COMMON SETTINGS
+	"git.enabled": true,
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"workbench.editor.labelFormat": "default",
+	"workbench.iconTheme": "bearded-icons",
+	"editor.formatOnSave": true,
+	"editor.suggestSelection": "first",
+	"editor.renderLineHighlight": "gutter",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"eslint.validate": ["javascript"],
+	"explorer.compactFolders": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"task.allowAutomaticTasks": "off",
+	"task.autoDetect": "off",
+	"files.associations": {
+		"*.vhost": "properties",
+		"*.rules": "properties",
+		"*.vars": "properties",
+		"*.farm": "properties",
+		"*.any": "properties"
+	},
+	"files.exclude": {
+		".idea": true,
+		".husky": true,
+		".vscode": true,
+		".gitlab": true,
+		".github": true,
+		".cloudmanager": true,
+		".gitignore": false,
+		".gitattributes": true,
+		".editorconfig": true,
+		"archconfig/**": true,
+		"archetype.properties": true,
+		"sonar-project.properties": true,
+		"**/.prettierignore": true,
+		"**/.prettierrc": true,
+		"**/.eslintignore": true,
+		"**/.eslintrc.json": true,
+		"**/.lintstagedrc.json": true,
+		"**/tsconfig.json": true,
+		"**/next-env.d.ts": true,
+		"**/postcss.config.js": true,
+		"**/tailwind.config.js": true,
+		"**/package-lock.json": true,
+		"**/target": true,
+		"**/build": true,
+		"**/node": true,
+		"**/node_modules": true,
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true,
+		"**/.next": true,
+		"**/.storybook": true
+	},
+	// PROGRAMING LANGUAGES SETTINGS
+	"javascript.suggest.autoImports": true,
+	"typescript.suggest.autoImports": true,
+	"javascript.preferences.quoteStyle": "double",
+	"typescript.preferences.quoteStyle": "double",
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	// EXTENSIONS IDE SETTINGS
+	"prettier.embeddedLanguageFormatting": "off",
+	"material-icon-theme.folders.theme": "specific",
+	"material-icon-theme.hidesExplorerArrows": false,
+	"material-icon-theme.saturation": 1,
+	"material-icon-theme.folders.associations": {
+		"pages": "shared",
+		"pulse": "api",
+		"impulse": "api",
+		"actions": "hook",
+		"commons": "common",
+		"archconfig": "config",
+		"bundle": "hook",
+		"app.config": "config",
+		"structure": "api",
+		"styles": "sass",
+		// Alelo PROJECT NAME
+		"alelo": "resolver",
+		// Alelo PROJECT FOLDERS
+		"authoring": "resource",
+		"presentation": "decorators"
+	},
+	"aemsync.password": "admin",
+	"aemsync.server": "http://localhost:4502",
+	"aemsync.user": "admin",
+	"java.configuration.updateBuildConfiguration": "disabled"
+}

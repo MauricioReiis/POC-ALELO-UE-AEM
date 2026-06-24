@@ -1,0 +1,152 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "AEM: Complete Root Build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": "mvn clean install -PautoInstallBundle,autoInstallPackage",
+            "problemMatcher": [],
+            "icon": {
+                "id": "verified-filled"
+            }
+        },
+        {
+            "label": "AEM: Complete Root Build Publish",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": "mvn clean install -PautoInstallSinglePackagePublish -DskipTests",
+            "problemMatcher": [],
+            "icon": {
+                "id": "verified-filled"
+            }
+        },
+        {
+            "label": "AEM: Develop Root Build",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": "mvn clean install -Ddev=default -DskipTests=true",
+            "problemMatcher": [],
+            "icon": {
+                "id": "root-folder"
+            }
+        },
+        {
+            "label": "AEM: Develop Bundle Build",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": "mvn clean install -Ddev=bundle -DskipTests=true",
+            "problemMatcher": [],
+            "icon": {
+                "id": "pulse"
+            }
+        },
+        {
+            "label": "AEM: Develop Package Build",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": "mvn clean install -Ddev=package",
+            "problemMatcher": [],
+            "icon": {
+                "id": "package"
+            }
+        },
+        {
+            "label": "Project: Report SonarQube",
+            "type": "shell",
+            "group": "none",
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": " mvn clean verify -Ddev=report sonar:sonar",
+            "problemMatcher": [],
+            "icon": {
+                "id": "report"
+            }
+        },
+        {
+            "label": "AEM: Front-end Build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "panel": "shared",
+                "echo": false,
+                "clear": true
+            },
+            "command": "cd modules/frontend/alelo && mvn clean install && cd ../../app && mvn clean install -PautoInstallPackage",
+            "problemMatcher": [],
+            "icon": {
+                "id": "verified-filled"
+            }
+        },
+        {
+            "label": "AEM: Universal Editor Service (Local)",
+            "type": "shell",
+            "group": "none",
+            "presentation": {
+                "panel": "shared",
+                "echo": true,
+                "clear": false,
+                "reveal": "always"
+            },
+            "command": "node tools/universal-editor/universal-editor-service.cjs",
+            "isBackground": true,
+            "problemMatcher": [],
+            "icon": {
+                "id": "browser"
+            }
+        },
+        {
+            "label": "AEM: UE Local + Deploy (POC)",
+            "type": "shell",
+            "group": "none",
+            "presentation": {
+                "panel": "shared",
+                "echo": true,
+                "clear": true,
+                "reveal": "always"
+            },
+            "command": "node tools/universal-editor/universal-editor-service.cjs & mvn clean install -PautoInstallSinglePackage",
+            "problemMatcher": [],
+            "icon": {
+                "id": "rocket"
+            }
+        }
+    ]
+}

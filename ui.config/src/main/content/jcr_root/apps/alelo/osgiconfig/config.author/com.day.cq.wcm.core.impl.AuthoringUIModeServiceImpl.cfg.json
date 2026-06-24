@@ -1,0 +1,11 @@
+{
+    "authoringUIModeService.default": "TOUCH",
+    "authoringUIModeService.editorUrl.classic": "/cf#",
+    "authoringUIModeService.editorUrl.touch": "/editor.html",
+    "authoringUIModeService.editorUrl.universal": "https://experience.adobe.com/ui#/aem/universal-editor/canvas/",
+    "authoringUIModeService.resourceTypes.universal": [
+        "core/franklin/components/page/v1/page",
+        "alelo/components/page",
+        "alelo/components/xfpage"
+    ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/alelo" mode="merge"/>
+    <filter root="/content/alelo" mode="merge"/>
+    <filter root="/content/dam/alelo" mode="merge">
+        <exclude pattern="/content/dam/alelo(/.*)?"/>
+        <include pattern="/content/dam/alelo/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/alelo/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/alelo" mode="merge"/>
+</workspaceFilter>
