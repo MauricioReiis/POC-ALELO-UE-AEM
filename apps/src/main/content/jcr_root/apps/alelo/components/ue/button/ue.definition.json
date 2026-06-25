@@ -1,0 +1,19 @@
+{
+  "title": "UE Button",
+  "id": "alelo-ue-button",
+  "model": "alelo-ue-button-model",
+  "plugins": {
+    "aem": {
+      "page": {
+        "resourceType": "alelo/components/ue/button",
+        "template": {
+          "label": "Call to action",
+          "size": "sm",
+          "actionType": "link",
+          "linkUrl": "#",
+          "target": "_self"
+        }
+      }
+    }
+  }
+}

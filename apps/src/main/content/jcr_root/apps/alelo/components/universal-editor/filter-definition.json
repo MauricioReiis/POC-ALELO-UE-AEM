@@ -1,0 +1,12 @@
+[
+    {
+        "id": "alelo-container-filter",
+        "components": [
+            "alelo-container",
+            "alelo-title",
+            "alelo-text",
+            "alelo-helloworld",
+            "alelo-ue-button"
+        ]
+    }
+]

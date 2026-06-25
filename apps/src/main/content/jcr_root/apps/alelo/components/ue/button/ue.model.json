@@ -1,0 +1,37 @@
+[
+  {
+    "id": "alelo-ue-button-model",
+    "fields": [
+      {
+        "component": "text",
+        "label": "Label",
+        "name": "label",
+        "valueType": "string",
+        "value": "Call to action"
+      },
+      {
+        "component": "select",
+        "label": "Size",
+        "name": "size",
+        "valueType": "string",
+        "value": "sm",
+        "options": [
+          { "name": "Small", "value": "sm" },
+          { "name": "Large", "value": "lg" }
+        ]
+      },
+      {
+        "component": "select",
+        "label": "Action Type",
+        "name": "actionType",
+        "valueType": "string",
+        "value": "link",
+        "options": [
+          { "name": "Link", "value": "link" },
+          { "name": "Modal", "value": "modal" },
+          { "name": "Anchor", "value": "anchor" }
+        ]
+      }
+    ]
+  }
+]

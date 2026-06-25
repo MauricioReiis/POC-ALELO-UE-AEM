@@ -1,0 +1,244 @@
+/* Font Faces for Alelo Marketing */
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Thin-web.ttf') format('ttf'),
+         url('AleloMarketing-Thin.woff') format('woff'),
+         url('AleloMarketing-Thin.woff2') format('woff2');
+    font-weight:  100;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-ThinItalic-web.ttf') format('ttf'),
+         url('AleloMarketing-ThinItalic.woff') format('woff'),
+         url('AleloMarketing-ThinItalic.woff2') format('woff2');
+    font-weight:  100;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Light-web.ttf') format('ttf'),
+         url('AleloMarketing-Light.woff') format('woff'),
+         url('AleloMarketing-Light.woff2') format('woff2');
+    font-weight:  300;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-LightItalic-web.ttf') format('ttf'),
+         url('AleloMarketing-LightItalic.woff') format('woff'),
+         url('AleloMarketing-LightItalic.woff2') format('woff2');
+    font-weight:  300;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Regular-web.ttf') format('ttf'),
+         url('AleloMarketing-Regular.woff') format('woff'),
+         url('AleloMarketing-Regular.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Italic-web.ttf') format('ttf'),
+         url('AleloMarketing-Italic.woff') format('woff'),
+         url('AleloMarketing-Italic.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Medium-web.ttf') format('ttf'),
+         url('AleloMarketing-Medium.woff') format('woff'),
+         url('AleloMarketing-Medium.woff2') format('woff2');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-MediumItalic-web.ttf') format('ttf'),
+         url('AleloMarketing-MediumItalic.woff') format('woff'),
+         url('AleloMarketing-MediumItalic.woff2') format('woff2');
+    font-weight:  500;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Bold-web.ttf') format('ttf'),
+         url('AleloMarketing-Bold.woff') format('woff'),
+         url('AleloMarketing-Bold.woff2') format('woff2');
+    font-weight:  700;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-BoldItalic-web.ttf') format('ttf'),
+         url('AleloMarketing-BoldItalic.woff') format('woff'),
+         url('AleloMarketing-BoldItalic.woff2') format('woff2');
+    font-weight:  700;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-Extrabold-web.ttf') format('ttf'),
+         url('AleloMarketing-Extrabold.woff') format('woff'),
+         url('AleloMarketing-Extrabold.woff2') format('woff2');
+    font-weight:  800;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Marketing';
+    src: url('AleloMarketing-ExtraboldItalic-web.ttf') format('ttf'),
+         url('AleloMarketing-ExtraboldItalic.woff') format('woff'),
+         url('AleloMarketing-ExtraboldItalic.woff2') format('woff2');
+    font-weight:  800;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+/* Font Faces for Alelo Texto */
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Thin-web.ttf') format('ttf'),
+         url('AleloTexto-Thin.woff') format('woff'),
+         url('AleloTexto-Thin.woff2') format('woff2');
+    font-weight:  100;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-ThinItalic-web.ttf') format('ttf'),
+         url('AleloTexto-ThinItalic.woff') format('woff'),
+         url('AleloTexto-ThinItalic.woff2') format('woff2');
+    font-weight:  100;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Light-web.ttf') format('ttf'),
+         url('AleloTexto-Light.woff') format('woff'),
+         url('AleloTexto-Light.woff2') format('woff2');
+    font-weight:  300;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-LightItalic-web.ttf') format('ttf'),
+         url('AleloTexto-LightItalic.woff') format('woff'),
+         url('AleloTexto-LightItalic.woff2') format('woff2');
+    font-weight:  300;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Regular-web.ttf') format('ttf'),
+         url('AleloTexto-Regular.woff') format('woff'),
+         url('AleloTexto-Regular.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Italic-web.ttf') format('ttf'),
+         url('AleloTexto-Italic.woff') format('woff'),
+         url('AleloTexto-Italic.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Medium-web.ttf') format('ttf'),
+         url('AleloTexto-Medium.woff') format('woff'),
+         url('AleloTexto-Medium.woff2') format('woff2');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-MediumItalic-web.ttf') format('ttf'),
+         url('AleloTexto-MediumItalic.woff') format('woff'),
+         url('AleloTexto-MediumItalic.woff2') format('woff2');
+    font-weight:  500;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Bold-web.ttf') format('ttf'),
+         url('AleloTexto-Bold.woff') format('woff'),
+         url('AleloTexto-Bold.woff2') format('woff2');
+    font-weight:  700;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-BoldItalic-web.ttf') format('ttf'),
+         url('AleloTexto-BoldItalic.woff') format('woff'),
+         url('AleloTexto-BoldItalic.woff2') format('woff2');
+    font-weight:  700;
+    font-style:   italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-Extrabold-web.ttf') format('ttf'),
+         url('AleloTexto-Extrabold.woff') format('woff'),
+         url('AleloTexto-Extrabold.woff2') format('woff2');
+    font-weight:  800;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Alelo Texto';
+    src: url('AleloTexto-ExtraboldItalic-web.ttf') format('ttf'),
+         url('AleloTexto-ExtraboldItalic.woff') format('woff'),
+         url('AleloTexto-ExtraboldItalic.woff2') format('woff2');
+    font-weight:  800;
+    font-style:   italic;
+    font-stretch: normal;
+}

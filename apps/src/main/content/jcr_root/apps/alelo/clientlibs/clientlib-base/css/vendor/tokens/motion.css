@@ -1,0 +1,12 @@
+:root {
+  --curve-productive-entrance: cubic-bezier(0.39, 0.57, 0.56, 1);
+  --curve-productive-exit: cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  --curve-expressive-entrance: cubic-bezier(0.17, 0.84, 0.44, 1);
+  --curve-expressive-exit: cubic-bezier(0.95, 0.05, 0.8, 0.04);
+  --duration-fast-01: 70ms;
+  --duration-fast-02: 110ms;
+  --duration-moderate-01: 150ms;
+  --duration-moderate-02: 240ms;
+  --duration-slow-01: 400ms;
+  --duration-slow-02: 700ms;
+}

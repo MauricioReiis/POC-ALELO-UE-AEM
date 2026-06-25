@@ -1,0 +1,21 @@
+<section class="ue-button" data-aue-resource="urn:aemconnection:${resource.path}"
+    data-aue-type="component" data-aue-label="UE Button"
+    data-aue-model="alelo-ue-button-model"
+    data-size="${properties.size}" data-blocked="${properties.blocked}"
+    data-centered="${properties.centered}" data-disabled="${properties.disabled}">
+    <a data-sly-test="${properties.actionType == 'link'}"
+        class="ue-button__control" href="${properties.linkUrl}"
+        target="${properties.target}" rel="noopener noreferrer"
+        data-color="${properties.color}" data-background-color="${properties.backgroundColor}">
+        <span data-aue-prop="label" data-aue-type="text">${properties.label}</span>
+    </a>
+
+    <button data-sly-test="${properties.actionType != 'link'}" class="ue-button__control"
+        type="button" disabled="${properties.disabled}"
+        data-action-type="${properties.actionType}"
+        data-modal-target="${properties.modalTarget}"
+        data-anchor-section="${properties.anchorSection}"
+        data-color="${properties.color}" data-background-color="${properties.backgroundColor}">
+        <span data-aue-prop="label" data-aue-type="text">${properties.label}</span>
+    </button>
+</section>

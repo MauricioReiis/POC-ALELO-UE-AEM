@@ -1,0 +1,95 @@
+{
+    "groups": [
+        {
+            "title": "Alelo Components",
+            "id": "alelo-general",
+            "components": [
+                {
+                    "title": "Container",
+                    "id": "alelo-container",
+                    "model": "alelo-container-model",
+                    "filter": "alelo-container-filter",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "alelo/components/container",
+                                "template": {
+                                    "layout": "responsiveGrid",
+                                    "surface": "panel",
+                                    "spacing": "normal"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Title",
+                    "id": "alelo-title",
+                    "model": "alelo-title-model",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "alelo/components/title",
+                                "template": {
+                                    "jcr:title": "Title",
+                                    "titleStyle": "section"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Text",
+                    "id": "alelo-text",
+                    "model": "alelo-text-model",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "alelo/components/text",
+                                "template": {
+                                    "text": "<p>Edit me with Universal Editor.</p>",
+                                    "textStyle": "body"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "Hello World",
+                    "id": "alelo-helloworld",
+                    "model": "alelo-helloworld-model",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "alelo/components/helloworld",
+                                "template": {
+                                    "text": "Hello from Universal Editor",
+                                    "variant": "feature"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "title": "UE Button",
+                    "id": "alelo-ue-button",
+                    "model": "alelo-ue-button-model",
+                    "plugins": {
+                        "aem": {
+                            "page": {
+                                "resourceType": "alelo/components/ue/button",
+                                "template": {
+                                    "label": "Call to action",
+                                    "size": "sm",
+                                    "actionType": "link",
+                                    "linkUrl": "#",
+                                    "target": "_self"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

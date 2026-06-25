@@ -1,0 +1,24 @@
+:root {
+  --font-family-brand: Alelo Marketing;
+  --font-family-base: Alelo Texto;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-size-3xs: 12px;
+  --font-size-2xs: 14px;
+  --font-size-xs: 16px;
+  --font-size-sm: 20px;
+  --font-size-md: 24px;
+  --font-size-lg: 32px;
+  --font-size-xl: 40px;
+  --font-size-2xl: 64px;
+  --font-size-3xl: 80px;
+  --line-height-default: 100%;
+  --line-height-sm: 124%;
+  --line-height-md: 132%;
+  --line-height-lg: 160%;
+  --letter-spacing-default: 0;
+  --letter-spacing-negative: -0.03em;
+  --letter-spacing-positive: 0.03em;
+}

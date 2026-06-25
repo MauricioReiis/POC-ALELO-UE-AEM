@@ -56,7 +56,7 @@
                     <embeddeds>
                         <embedded>
                             <groupId>br.com.alelo</groupId>
-                            <artifactId>alelo.ui.apps</artifactId>
+                            <artifactId>alelo.apps</artifactId>
                             <type>zip</type>
                             <target>/apps/alelo-packages/application/install</target>
                         </embedded>
@@ -67,13 +67,13 @@
                         </embedded>
                         <embedded>
                             <groupId>br.com.alelo</groupId>
-                            <artifactId>alelo.ui.content</artifactId>
+                            <artifactId>alelo.content</artifactId>
                             <type>zip</type>
                             <target>/apps/alelo-packages/content/install</target>
                         </embedded>
                         <embedded>
                             <groupId>br.com.alelo</groupId>
-                            <artifactId>alelo.ui.config</artifactId>
+                            <artifactId>alelo.config</artifactId>
                             <type>zip</type>
                             <target>/apps/alelo-packages/application/install</target>
                         </embedded>
@@ -180,19 +180,19 @@
     <dependencies>
         <dependency>
             <groupId>br.com.alelo</groupId>
-            <artifactId>alelo.ui.apps</artifactId>
+            <artifactId>alelo.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>br.com.alelo</groupId>
-            <artifactId>alelo.ui.content</artifactId>
+            <artifactId>alelo.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>br.com.alelo</groupId>
-            <artifactId>alelo.ui.config</artifactId>
+            <artifactId>alelo.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>

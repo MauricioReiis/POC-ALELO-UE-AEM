@@ -116,24 +116,7 @@
             }
         },
         {
-            "label": "AEM: Universal Editor Service (Local)",
-            "type": "shell",
-            "group": "none",
-            "presentation": {
-                "panel": "shared",
-                "echo": true,
-                "clear": false,
-                "reveal": "always"
-            },
-            "command": "node tools/universal-editor/universal-editor-service.cjs",
-            "isBackground": true,
-            "problemMatcher": [],
-            "icon": {
-                "id": "browser"
-            }
-        },
-        {
-            "label": "AEM: UE Local + Deploy (POC)",
+            "label": "AEM: UE Start + Connect",
             "type": "shell",
             "group": "none",
             "presentation": {
@@ -142,10 +125,26 @@
                 "clear": true,
                 "reveal": "always"
             },
-            "command": "node tools/universal-editor/universal-editor-service.cjs & mvn clean install -PautoInstallSinglePackage",
+            "command": "npx --yes kill-port 8080 || true; npx --yes kill-port 9443 || true; (set -a; source tools/universal-editor/.env; set +a; node tools/universal-editor/universal-editor-service.cjs > /tmp/ue-service.log 2>&1) & node tools/universal-editor/ue-https-frame-proxy.cjs > /tmp/ue-frame-proxy.log 2>&1 & npx --yes wait-on http-get://localhost:8080/ping tcp:9443 --timeout 20000 && curl -k -s -o /dev/null -u admin:admin https://localhost:9443/content/alelo/us/en.html && echo 'UE rodando sem conflitos: service(8080) + frame-proxy(9443). Conexao pronta.' || (echo 'Falha ao iniciar/conectar UE. Veja logs: /tmp/ue-service.log e /tmp/ue-frame-proxy.log'; exit 1)",
             "problemMatcher": [],
             "icon": {
                 "id": "rocket"
+            }
+        },
+        {
+            "label": "AEM: Sync Rango Design System",
+            "type": "shell",
+            "group": "none",
+            "presentation": {
+                "panel": "shared",
+                "echo": true,
+                "clear": true,
+                "reveal": "always"
+            },
+            "command": "node tools/universal-editor/sync-rango-design-system.cjs",
+            "problemMatcher": [],
+            "icon": {
+                "id": "sync"
             }
         }
     ]

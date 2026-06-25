@@ -1,0 +1,93 @@
+<?xml version="1.0"
+      encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content pageTitle="Alelo"
+                 jcr:primaryType="cq:PageContent"
+                 jcr:title="en"
+                 cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+                 cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+                 cq:template="/conf/alelo/settings/wcm/templates/page-content"
+                 sling:resourceType="alelo/components/page">
+        <root jcr:primaryType="nt:unstructured"
+              sling:resourceType="alelo/components/container"
+              layout="responsiveGrid"
+              surface="panel"
+              spacing="spacious">
+            <container jcr:primaryType="nt:unstructured"
+                       sling:resourceType="alelo/components/container"
+                       surface="card"
+                       spacing="normal">
+                <title jcr:primaryType="nt:unstructured"
+                       sling:resourceType="alelo/components/title"
+                       titleStyle="hero"/>
+                <container jcr:primaryType="nt:unstructured"
+                           sling:resourceType="alelo/components/container"
+                           layout="responsiveGrid"
+                           surface="plain"
+                           spacing="normal">
+                    <teaser
+                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Epic Journey"
+                        sling:resourceType="alelo/components/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default jcr:primaryType="nt:unstructured"
+                                     offset="0"
+                                     width="4"/>
+                        </cq:responsive>
+                    </teaser>
+                    <teaser_copy
+                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Epic Journey"
+                        sling:resourceType="alelo/components/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default jcr:primaryType="nt:unstructured"
+                                     offset="0"
+                                     width="4"/>
+                        </cq:responsive>
+                    </teaser_copy>
+                    <teaser_copy_1579324932
+                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Epic Journey"
+                        sling:resourceType="alelo/components/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default jcr:primaryType="nt:unstructured"
+                                     offset="0"
+                                     width="4"/>
+                        </cq:responsive>
+                    </teaser_copy_1579324932>
+                    <helloworld jcr:primaryType="nt:unstructured"
+                                sling:resourceType="alelo/components/helloworld"
+                                text="lalala :)"
+                                variant="feature"/>
+                        <uebutton
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="alelo/components/ue/button"
+                            actionType="link"
+                            label="Saiba mais"
+                            linkUrl="#"
+                            size="sm"
+                            target="_self"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

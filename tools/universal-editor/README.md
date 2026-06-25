@@ -1,4 +1,4 @@
-# Universal Editor Service local (POC)
+# Serviço Universal Editor Local (POC)
 
 Este diretório contém o serviço local do Universal Editor fornecido pela Adobe:
 
@@ -6,22 +6,22 @@ Este diretório contém o serviço local do Universal Editor fornecido pela Adob
 
 ## Onde colocar o arquivo
 
-Esse arquivo **nao** deve ir para `ui.apps` nem para `core`.
+Esse arquivo **não** deve ir para `apps` nem para `core`.
 Ele deve rodar como um processo Node separado (ferramenta local).
 
-## Pre-requisitos
+## Pré-requisitos
 
 - Node.js instalado (`node -v`)
-- AEM Author local em execucao (`http://localhost:4502`)
+- AEM Author local em execução (`http://localhost:4502`)
 
 ## Como iniciar
 
-Opcao 1 (VS Code Task):
+**Opção 1 (VS Code Task):**
 
-- Execute a task `AEM: Universal Editor Service (Local)`
-- Ou execute a task `AEM: UE Local + Deploy (POC)` para subir o servico e fazer deploy no author em uma unica execucao
+- Execute a tarefa `AEM: Universal Editor Service (Local)`
+- Ou execute a tarefa `AEM: UE Local + Deploy (POC)` para subir o serviço e fazer deploy no author em uma única execução
 
-Opcao 2 (terminal):
+**Opção 2 (terminal):**
 
 ```bash
 node tools/universal-editor/universal-editor-service.cjs
@@ -31,7 +31,7 @@ Ao subir corretamente, o log deve mostrar:
 
 `Universal Editor Service listening on port 8080 as HTTP Server`
 
-Teste rapido:
+**Teste rápido:**
 
 ```bash
 curl -i http://localhost:8080/ping
@@ -47,7 +47,7 @@ Retorno esperado: `HTTP/1.1 200 OK`
 mvn clean install -PautoInstallSinglePackage
 ```
 
-2. Confirme que a pagina abre no author:
+2. Confirme que a página abre no author:
 
 - `http://localhost:4502/editor.html/content/alelo/us/en.html`
 
@@ -55,81 +55,117 @@ mvn clean install -PautoInstallSinglePackage
 
 4. CORS do author:
 
-- A configuracao em `ui.config` foi ajustada para aceitar as origens:
+- A configuração em `config` foi ajustada para aceitar as origens:
   - `http://localhost:8080`
   - `http://127.0.0.1:8080`
 
 ## O que foi implementado na POC
 
-1. Servico local versionado no projeto:
+### 1) Serviço local do Universal Editor
 
-- `tools/universal-editor/universal-editor-service.cjs`
+- Arquivo do serviço adicionado ao projeto:
+  - `tools/universal-editor/universal-editor-service.cjs`
+- Healthcheck utilizado:
+  - `http://localhost:8080/ping`
 
-2. Task para subir somente o servico:
+### 2) Automação no VS Code (tarefas)
 
-- `AEM: Universal Editor Service (Local)` em `.vscode/tasks.json`
+- Tarefa para subir somente o serviço local:
+  - `AEM: Universal Editor Service (Local)` em `.vscode/tasks.json`
+- Tarefa combinada para serviço + deploy:
+  - `AEM: UE Local + Deploy (POC)` em `.vscode/tasks.json`
 
-3. Task combinada para servico + deploy:
+### 3) CORS no Author
 
-- `AEM: UE Local + Deploy (POC)` em `.vscode/tasks.json`
+- Inclusão de origens locais para o serviço:
+  - `http://localhost:8080`
+  - `http://127.0.0.1:8080`
+- Arquivo:
+  - `config/src/main/content/jcr_root/apps/alelo/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~alelo.cfg.json`
 
-4. Instrumentacao inicial de componente para Universal Editor:
+### 4) Instrumentação de página (head)
 
-- Arquivo: `ui.apps/src/main/content/jcr_root/apps/alelo/components/helloworld/helloworld.html`
-- Atributos adicionados:
-  - `data-aue-resource="urn:aaid:aem:${resource.path}"`
-  - `data-aue-type="component"`
-  - `data-aue-label="Hello World"`
-  - `data-aue-prop="text"` no campo editavel `properties.text`
+- Inclusão do script CORS oficial do Universal Editor
+- Inclusão de meta tags de conexão:
+  - `urn:adobe:aue:system:aemconnection`
+  - `urn:adobe:aue:config:service`
+- Arquivos:
+  - `apps/src/main/content/jcr_root/apps/alelo/components/page/customheaderlibs.html`
+  - `apps/src/main/content/jcr_root/apps/alelo/components/xfpage/customheaderlibs.html`
 
-5. Instrumentacao adicional para componentes base da pagina:
+### 5) Instrumentação de componentes
 
-- `ui.apps/src/main/content/jcr_root/apps/alelo/components/title/title.html`
-- `ui.apps/src/main/content/jcr_root/apps/alelo/components/text/text.html`
-- `ui.apps/src/main/content/jcr_root/apps/alelo/components/container/container.html`
+- Componente customizado (Hello World) com `data-aue-resource`, `data-aue-type` e `data-aue-prop`
+- Componentes base instrumentados para cobertura de página:
+  - `title`
+  - `text`
+  - `container`
+- Arquivos:
+  - `apps/src/main/content/jcr_root/apps/alelo/components/helloworld/helloworld.html`
+  - `apps/src/main/content/jcr_root/apps/alelo/components/title/title.html`
+  - `apps/src/main/content/jcr_root/apps/alelo/components/text/text.html`
+  - `apps/src/main/content/jcr_root/apps/alelo/components/container/container.html`
 
-6. Meta tags e script de conexao no `head` da pagina para Universal Editor:
+### 6) Mapeamento de abertura por resourceType
 
-- `ui.apps/src/main/content/jcr_root/apps/alelo/components/page/customheaderlibs.html`
-- `ui.apps/src/main/content/jcr_root/apps/alelo/components/xfpage/customheaderlibs.html`
-
-7. Configuracao de modo de abertura por `resourceType`:
-
-- `ui.config/src/main/content/jcr_root/apps/alelo/osgiconfig/config.author/com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl.cfg.json`
-- `authoringUIModeService.editorUrl.universal` configurado para `https://experience.adobe.com/ui#/aem/universal-editor/canvas/`
-- Resource types configurados para Universal Editor:
+- Configuração para abrir conteúdos específicos no fluxo Universal Editor:
   - `alelo/components/page`
   - `alelo/components/xfpage`
+- Arquivo:
+  - `config/src/main/content/jcr_root/apps/alelo/osgiconfig/config.author/com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl.cfg.json`
 
-## Validacao rapida
+## Como replicar em outros projetos (arquiteturas distintas)
 
-1. Healthcheck do servico local:
+### Passo A - Serviço local
 
-```bash
-curl -i http://localhost:8080/ping
-```
+1. Adicionar o arquivo do serviço local ao projeto
+2. Criar tarefa/comando para subir o serviço
+3. Confirmar `GET /ping` retornando `200`
 
-Esperado: `HTTP/1.1 200 OK`
+### Passo B - CORS
 
-2. Pagina no author:
+1. Liberar no Author as origens do serviço local
+2. Restringir paths conforme escopo do projeto (`/content`, `/conf` etc.)
 
-- `http://localhost:4502/editor.html/content/alelo/us/en.html`
+### Passo C - Instrumentação no head
 
-3. Confirmar que o componente de Hello World renderiza na pagina para teste de edicao via UE.
+1. Incluir script:
+   - `https://universal-editor-service.adobe.io/cors.js`
+2. Incluir meta de conexão AEM:
+   - `urn:adobe:aue:system:aemconnection`
+3. Incluir meta de endpoint do serviço:
+   - `urn:adobe:aue:config:service`
 
-## Importante sobre o layout do editor
+### Passo D - Instrumentação de componentes
 
-Se voce abrir a pagina diretamente em `editor.html`, voce estara no Page Editor classico.
+1. Em cada componente editável, adicionar:
+   - `data-aue-resource` (apontando para o recurso persistente)
+   - `data-aue-type` (`component`, `container`, `text`, `richtext`, etc.)
+   - `data-aue-prop` para propriedades editáveis
+2. Priorizar primeiro componentes estruturais:
+   - Page, Container, Title, Text
 
-Para usar o Universal Editor:
+### Passo E - Mapeamento de abertura
 
-1. Abra a pagina pelo fluxo de Universal Editor (na abertura por `resourceType` configurada no author), que agora direciona para a UI oficial em `experience.adobe.com`.
-2. Garanta que o servico local esteja ativo em `http://localhost:8080`.
-3. Garanta que as meta tags `urn:adobe:aue:*` estejam no `head` da pagina renderizada.
+1. Configurar `AuthoringUIModeService` por `resourceType` ou path
+2. Definir quais tipos devem abrir no fluxo Universal Editor
 
-Se mesmo assim ainda abrir no editor antigo, a causa mais comum em ambiente local e o endpoint de UI do Universal Editor nao estar disponivel no dominio local do SDK. Nesse caso, a instrumentacao e o backend local continuam corretos, mas a UI do editor precisa ser acessada pelo fluxo suportado na instancia (ou configuracao equivalente no ambiente).
+## Checklist de validação (replicável)
 
-## Observacao importante
+1. Serviço local ativo: `curl -i http://localhost:8080/ping`
+2. Deploy concluído no Author sem erro
+3. HTML renderizado contém:
+   - metas `urn:adobe:aue:*`
+   - atributos `data-aue-*`
+4. OSGi contém `resourceTypes.universal` para os tipos alvo
 
-Este servico local substitui o backend remoto de servico para a POC.
-Dependendo da versao do AEM SDK e do fluxo de uso do Universal Editor, voce ainda pode precisar habilitar instrumentacao de pagina/componentes para edicao universal.
+## Limitações importantes
+
+- O arquivo local do serviço não substitui a UI oficial do Universal Editor
+- Sem Adobe ID/permissão no produto, não há acesso completo a interface oficial do Universal Editor
+- Sem login, a POC cobre integração técnica (instrumentação + persistência), não a experiência completa da UI oficial
+
+## Resultado desta POC
+
+- Projeto ficou UE-ready no nível técnico (instrumentação, serviço local, mapeamento, CORS)
+- Estrutura pronta para reaproveitamento em projetos AEM headful, headless ou híbridos com ajustes mínimos de paths/resourceTypes

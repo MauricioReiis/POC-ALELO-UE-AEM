@@ -1,0 +1,53 @@
+.ue-button {
+  display: flex;
+  width: 100%;
+}
+
+.ue-button[data-centered="true"] {
+  justify-content: center;
+}
+
+.ue-button[data-centered="false"] {
+  justify-content: flex-start;
+}
+
+.ue-button__control {
+  width: fit-content;
+  min-width: 132px;
+  height: 48px;
+  padding: 0 var(--spacing-4x, 1rem);
+  border: 0;
+  border-radius: var(--default-border-radius, 8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: var(--on-action-label-primary-color, #ffffff);
+  background-color: var(--action-bg-primary-color, #723dc1);
+  transition: opacity var(--duration-fast-02, 120ms) ease;
+}
+
+.ue-button[data-size="lg"] .ue-button__control {
+  min-width: 148px;
+  height: 64px;
+  padding: 0 var(--spacing-5x, 1.25rem);
+}
+
+.ue-button[data-blocked="true"] .ue-button__control {
+  width: 100%;
+}
+
+.ue-button[data-disabled="true"] .ue-button__control,
+.ue-button__control:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: var(--disabled-opacity, 0.38);
+  color: var(--on-disabled-label-color, #8f8f8f);
+  background-color: var(--disabled-bg-color, #f0f0f0);
+}
+
+.ue-button__control:hover {
+  opacity: var(--hover-container, 0.85);
+}

@@ -1,0 +1,264 @@
+[
+  {
+    "id": "alelo-container-model",
+    "fields": [
+      {
+        "component": "select",
+        "label": "Surface",
+        "name": "surface",
+        "valueType": "string",
+        "value": "panel",
+        "options": [
+          {
+            "name": "Panel",
+            "value": "panel"
+          },
+          {
+            "name": "Card",
+            "value": "card"
+          },
+          {
+            "name": "Plain",
+            "value": "plain"
+          }  
+        ]
+      },
+      {
+        "component": "select",
+        "label": "Spacing",
+        "name": "spacing",
+        "valueType": "string",
+        "value": "normal",
+        "options": [
+          {
+            "name": "Compact",
+            "value": "compact"
+          },
+          {
+            "name": "Normal",
+            "value": "normal"
+          },
+          {
+            "name": "Spacious",
+            "value": "spacious"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alelo-title-model",
+    "fields": [
+      {
+        "component": "text",
+        "label": "Title",
+        "name": "jcr:title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "label": "Title Style",
+        "name": "titleStyle",
+        "valueType": "string",
+        "value": "hero",
+        "options": [
+          {
+            "name": "Hero",
+            "value": "hero"
+          },
+          {
+            "name": "Section",
+            "value": "section"
+          },
+          {
+            "name": "Eyebrow",
+            "value": "eyebrow"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alelo-text-model",
+    "fields": [
+      {
+        "component": "richtext",
+        "label": "Text",
+        "name": "text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "label": "Text Style",
+        "name": "textStyle",
+        "valueType": "string",
+        "value": "body",
+        "options": [
+          {
+            "name": "Body",
+            "value": "body"
+          },
+          {
+            "name": "Muted",
+            "value": "muted"
+          },
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alelo-helloworld-model",
+    "fields": [
+      {
+        "component": "text",
+        "label": "Text",
+        "name": "text",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "label": "Variant",
+        "name": "variant",
+        "valueType": "string",
+        "value": "feature",
+        "options": [
+          {
+            "name": "Feature",
+            "value": "feature"
+          },
+          {
+            "name": "Border",
+            "value": "border"
+          },
+          {
+            "name": "Soft",
+            "value": "soft"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alelo-ue-button-model",
+    "fields": [
+      {
+        "component": "text",
+        "label": "Label",
+        "name": "label",
+        "valueType": "string",
+        "value": "Call to action"
+      },
+      {
+        "component": "select",
+        "label": "Size",
+        "name": "size",
+        "valueType": "string",
+        "value": "sm",
+        "options": [
+          {
+            "name": "Small",
+            "value": "sm"
+          },
+          {
+            "name": "Large",
+            "value": "lg"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "label": "Action Type",
+        "name": "actionType",
+        "valueType": "string",
+        "value": "link",
+        "options": [
+          {
+            "name": "Link",
+            "value": "link"
+          },
+          {
+            "name": "Modal",
+            "value": "modal"
+          },
+          {
+            "name": "Anchor",
+            "value": "anchor"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "label": "Link URL",
+        "name": "linkUrl",
+        "valueType": "string",
+        "value": "#"
+      },
+      {
+        "component": "text",
+        "label": "Anchor Section",
+        "name": "anchorSection",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "label": "Modal Target",
+        "name": "modalTarget",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "label": "Target",
+        "name": "target",
+        "valueType": "string",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "_self"
+          },
+          {
+            "name": "New Tab",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "label": "Blocked",
+        "name": "blocked",
+        "valueType": "boolean",
+        "value": false
+      },
+      {
+        "component": "boolean",
+        "label": "Centered",
+        "name": "centered",
+        "valueType": "boolean",
+        "value": false
+      },
+      {
+        "component": "boolean",
+        "label": "Disabled",
+        "name": "disabled",
+        "valueType": "boolean",
+        "value": false
+      },
+      {
+        "component": "text",
+        "label": "Text Color",
+        "name": "color",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "label": "Background Color",
+        "name": "backgroundColor",
+        "valueType": "string"
+      }
+    ]
+  }
+]
